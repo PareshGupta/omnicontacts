@@ -12,7 +12,8 @@ module OmniContacts
     end
 
     def rack14?
-      Rack.release.split('.')[1].to_i >= 4
+      # Rack.release.split('.')[1].to_i >= 4
+      Rack.release.split('.')[0].to_i >= 1.4          # For Rails 5, rack version is 2.0.0.rc
     end
 
     def importer importer, *args
